@@ -1,13 +1,20 @@
-FROM node:20-alpine
+# Use the official Node.js image as the base image
+FROM node:18-alpine
 
+# Set the working directory inside the container
 WORKDIR /app
 
-COPY package.json /app
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
 
+# Install app dependencies
 RUN npm install
 
-COPY . /app
+# Copy the rest of the application code to the working directory
+COPY . .
 
+# Expose the port that the app will listen on
 EXPOSE 3000
 
-CMD ["npm", "start"]
+# Start the app
+CMD [ "npm", "start" ]
