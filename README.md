@@ -11,13 +11,13 @@ helm create <chart-name>
 To pack new helm chart
 
 ```bash
-helm package sample-express-chart
+helm package <chart-name>
 ```
 
 To install new helm chart
 
 ```bash
-helm install sample-express-chart sample-express-chart-0.1.0.tgz
+helm install <chart-name> <chart-zip-file>
 ```
 
 To list all current install chart
@@ -29,5 +29,5 @@ helm list
 To uninstall chart
 
 ```bash
-helm uninstall sample-express-chart
+helm uninstall <chart-name>
 ```
