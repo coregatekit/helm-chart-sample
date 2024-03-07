@@ -2,6 +2,12 @@
 
 ## Sample command
 
+To create a new chart
+
+```bash
+helm create <chart-name>
+```
+
 To pack new helm chart
 
 ```bash
